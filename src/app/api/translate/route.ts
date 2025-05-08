@@ -80,11 +80,6 @@ async function callGeminiApi(text: string, sourceLang: string, targetLang: strin
     let translatedText = "";
     if (result && typeof (result as any).text === 'string') { // Check for direct .text string property
         translatedText = (result as any).text;
-    } else if (result && result.response && typeof result.response.text === 'function') { // Standard path
-        translatedText = result.response.text();
-    } else if (result && result.response && result.response.candidates && result.response.candidates.length > 0 &&
-               result.response.candidates[0].content && result.response.candidates[0].content.parts && result.response.candidates[0].content.parts.length > 0) {
-      translatedText = result.response.candidates[0].content.parts.map((part: {text: string}) => part.text).join("");
     } else {
         console.error("Could not extract text from Gemini response:", JSON.stringify(result, null, 2));
         throw new Error("Invalid response structure from Gemini API");
