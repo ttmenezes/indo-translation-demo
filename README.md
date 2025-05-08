@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Goal
+
+This application serves as a quick playground and demonstration for Large Language Model (LLM) based text translation. It specifically focuses on showcasing translation capabilities between English, Javanese, and Indonesian. The app allows users to experiment with both zero-shot and few-shot (many-shot) translation prompting techniques to observe the differences in translation quality and behavior.
+
+It provides a simple interface to input text, select source and target languages (from English, Javanese, Indonesian), choose a translation mode (zero-shot or many-shot), and view the LLM-generated translation. For many-shot translations, the backend can be configured to use example sentences from a CSV file to provide context to the LLM.
+
+This project is ideal for:
+- Quickly testing LLM translation for Javanese and Indonesian.
+- Understanding the practical differences between zero-shot and few-shot prompting for translation tasks.
+- Serving as a starting point for more complex translation applications leveraging LLMs.
+
 ## Getting Started
 
 First, run the development server:
